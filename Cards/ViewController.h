@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    IBOutlet UILabel *reelOne, *reelTwo, *reelThree, *reelFour, *reelFive, *clickCount;
+
+}
+
+@property (retain, nonatomic) UILabel *reelOne, *reelTwo, *reelThree, *reelFour, *reelFive, *clickCount;
+
+-(IBAction)drawCards:(id)sender;
+
 
 @end

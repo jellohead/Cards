@@ -10,6 +10,33 @@
 
 @implementation ViewController
 
+
+@synthesize reelOne, reelTwo, reelThree, reelFour, reelFive, clickCount;
+int i=0;
+
+-(IBAction)drawCards:(id)sender {
+    
+    i++;
+    [clickCount setText:[NSString stringWithFormat:@"Number of clicks = %d", i]];
+
+    
+    
+    int reelOneValue = (arc4random() %41) +1;
+    int reelTwoValue = (arc4random() %41) +1;
+    int reelThreeValue = (arc4random() %41) +1;
+    int reelFourValue = (arc4random() %41) +1;
+    int reelFiveValue = (arc4random() %41) +1;
+    
+    [reelOne setText:[NSString stringWithFormat:@"%d", reelOneValue]];
+    [reelTwo setText:[NSString stringWithFormat:@"%d", reelTwoValue]];
+    [reelThree setText:[NSString stringWithFormat:@"%d", reelThreeValue]];
+    [reelFour setText:[NSString stringWithFormat:@"%d", reelFourValue]];
+    [reelFive setText:[NSString stringWithFormat:@"%d", reelFiveValue]];
+    
+    
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
